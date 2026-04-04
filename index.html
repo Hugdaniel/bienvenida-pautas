@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida y Pautas | Tu Marca</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>VISIÓN DESIGN</h1>
+        <p>desarrollo de soluciones digitales</p>
+    </header>
+
+    <section class="card section-welcome">
+        <h2>¡Bienvenido/a!</h2>
+        <p>Es un placer saludarte. Gracias por confiar en nosotros para el desarrollo de tu proyecto. Estamos entusiasmados por empezar a trabajar juntos y dar vida a tus ideas.</p>
+        <p>Para garantizar el éxito y la claridad en todo el proceso, por favor revisa y acepta nuestras pautas de trabajo a continuación.</p>
+    </section>
+
+    <section class="card section-project-details">
+    <h3>Resumen del Proyecto</h3>
+    <div class="project-info">
+        <p>Juntos trabajaremos en el desarrollo de: 
+            <span class="highlight-text">Invitación Web interactiva</span> 
+            para <span class="highlight-text">Elena</span>, quien cumple 6 años con la temática 
+            <span class="highlight-text">Princesas</span>.
+        </p>
+        <div class="price-tag">
+            <span class="label">Valor acordado:</span>
+            <span class="amount">$XXXXXX</span>
+        </div>
+    </div>
+</section>
+
+    <section class="card section-rules">
+        <h3>Cómo Trabajamos</h3>
+        <ul class="rules-list">
+            <li><strong>Seña del 50%:</strong> El proyecto inicia oficialmente una vez confirmado el pago inicial.</li>
+            <li><strong>Revisiones Limitadas:</strong> Incluimos hasta 2 (dos) instancias de cambios sobre la propuesta entregada.</li>
+            <li><strong>Material del Cliente:</strong> Los plazos de entrega comienzan a correr desde la recepción de todo el material (textos, logos, etc.).</li>
+            <li><strong>Entrega y Saldo:</strong> El 50% restante se abona para la entrega final de archivos o publicación.</li>
+        </ul>
+    </section>
+
+    <section class="card section-accept">
+        <label class="checkbox-container">
+            <input type="checkbox" id="terms-check">
+            <span class="checkmark"></span>
+            He leído y acepto las pautas de trabajo.
+        </label>
+        <button id="btn-continue" class="btn btn-primary" disabled>Continuar</button>
+    </section>
+
+    <section id="payment-section" class="card section-payment hidden">
+        <h3>Datos de Transferencia (Seña 50%)</h3>
+        <p>Por favor, realiza la transferencia y envíanos el comprobante.</p>
+        <div class="bank-details">
+            <div class="detail-item"><strong>Alias:</strong> <span>TU.ALIAS.AQUI</span></div>
+            <div class="detail-item"><strong>CBU:</strong> <span>000000000000000000000</span></div>
+            <div class="detail-item"><strong>Titular:</strong> <span>Tu Nombre Completo</span></div>
+        </div>
+        <p class="highlight-text">Una vez realizado el pago, por favor completa el formulario de inicio a continuación.</p>
+    </section>
+
+    <section id="form-section" class="card section-form hidden">
+        <h3>Formulario de Inicio de Proyecto</h3>
+        <p>Completa los datos básicos para que podamos organizar la información de tu trabajo.</p>
+        
+        <a href="TU_LINK_DE_GOOGLE_FORMS" target="_blank" class="btn btn-accent">Abrir Formulario de Proyecto</a>
+    </section>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
