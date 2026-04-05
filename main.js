@@ -29,13 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 }); // <--- Aquí cierra correctamente el DOMContentLoaded
 
-// Función para copiar (Debe estar AFUERA para que el 'onclick' del HTML la encuentre)
+// ESTA FUNCIÓN SIEMPRE AFUERA
 function copyToClipboard(elementId) {
     const textToCopy = document.getElementById(elementId).innerText;
     const button = document.querySelector(`button[onclick="copyToClipboard('${elementId}')"]`);
     const originalText = button.innerText;
 
-    // Intentamos con la API moderna
     if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(textToCopy)
             .then(() => showSuccess(button, originalText))
@@ -45,31 +44,17 @@ function copyToClipboard(elementId) {
     }
 }
 
-// Función Plan B (para máxima compatibilidad)
 function fallbackCopy(text, button, originalText) {
     const textArea = document.createElement("textarea");
     textArea.value = text;
-    textArea.style.position = "fixed";
-    textArea.style.left = "-9999px";
-    textArea.style.top = "0";
     document.body.appendChild(textArea);
-    textArea.focus();
     textArea.select();
-    try {
-        document.execCommand('copy');
-        showSuccess(button, originalText);
-    } catch (err) {
-        console.error('Error al copiar:', err);
-    }
+    document.execCommand('copy');
     document.body.removeChild(textArea);
+    showSuccess(button, originalText);
 }
 
-// Función para mostrar el mensaje de éxito
 function showSuccess(button, originalText) {
     button.innerText = "¡Copiado!";
-    button.classList.add('copied');
-    setTimeout(() => {
-        button.innerText = originalText;
-        button.classList.remove('copied');
-    }, 2000);
+    setTimeout(() => { button.innerText = originalText; }, 2000);
 }
