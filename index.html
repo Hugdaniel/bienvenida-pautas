@@ -55,23 +55,28 @@
         <button id="btn-continue" class="btn btn-primary" disabled>Continuar</button>
     </section>
 
-    <section id="payment-section" class="card section-payment hidden">
+   <section id="payment-section" class="card section-payment hidden">
         <h3>Datos de Transferencia (Seña 50%)</h3>
         <p>Por favor, realiza la transferencia y envíanos el comprobante.</p>
+        
         <div class="bank-details">
-            <div class="bank">Banco Frances</div>
-            <div class="detail-item"><strong>Alias:</strong> <span>VISION.HDB.85</span></div>
+            <div class="bank">Banco Francés</div>
+            <div class="detail-item">
+                <strong>Alias:</strong> 
+                <span id="alias-bbva">VISION.HDB.85</span> </div>
             <button class="btn-copy" onclick="copyToClipboard('alias-bbva')">Copiar Alias</button>
-            <!-- <div class="detail-item"><strong>CBU:</strong> <span>000000000000000000000</span></div> -->
             <div class="detail-item"><strong>Titular:</strong> <span>Hugo Daniel Barrios</span></div>
         </div>
+
         <div class="bank-details">
             <div class="bank">Mercado Pago</div>
-            <div class="detail-item"><strong>Alias:</strong> <span>85.hdb</span></div>
+            <div class="detail-item">
+                <strong>Alias:</strong> 
+                <span id="alias-mp">85.hdb</span> </div>
             <button class="btn-copy" onclick="copyToClipboard('alias-mp')">Copiar Alias</button>
-            <!-- <div class="detail-item"><strong>CBU:</strong> <span>000000000000000000000</span></div> -->
             <div class="detail-item"><strong>Titular:</strong> <span>Hugo Daniel Barrios</span></div>
         </div>
+
         <p class="highlight-text">Una vez realizado el pago, por favor completa el formulario de inicio a continuación.</p>
     </section>
 
