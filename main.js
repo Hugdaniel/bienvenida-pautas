@@ -32,4 +32,30 @@ document.addEventListener('DOMContentLoaded', () => {
         paymentSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }, 400);
 });
+
+// Función para copiar texto al portapapeles
+function copyToClipboard(elementId) {
+    // Obtenemos el texto del elemento
+    const textToCopy = document.getElementById(elementId).innerText;
+    
+    // Usamos la API del portapapeles de JS
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        // Buscamos el botón que disparó la función para dar feedback
+        const button = document.querySelector(`button[onclick="copyToClipboard('${elementId}')"]`);
+        const originalText = button.innerText;
+        
+        button.innerText = "¡Copiado!";
+        button.classList.add('copied');
+        
+        // Volvemos al estado original después de 2 segundos
+        setTimeout(() => {
+            button.innerText = originalText;
+            button.classList.remove('copied');
+        }, 2000);
+    }).catch(err => {
+        console.error('Error al copiar: ', err);
+    });
+}
+
 });
+

@@ -1,13 +1,13 @@
 /* --- Variables de Color (Tu Marca) --- */
 :root {
-    --bg-body: #2C2B3C;       /* Negro muy oscuro (casi azul) */
-    --bg-card: #111827;       /* Azul Marino muy oscuro */
-    --text-main: #e2e8f0;     /* Gris muy claro (para lectura) */
-    --text-muted: #94a3b8;    /* Gris medio */
-    --primary: #FBB13C;       /* Violeta Oscuro principal */
-    --primary-hover: #7c3aed; /* Violeta más claro al pasar el mouse */
-    --accent: #10b981;        /* Verde Esmeralda (para el formulario/éxito) */
-    --border: #1f2937;        /* Gris oscuro para bordes */
+    --bg-body: #081835;       
+    --bg-card: #111827;       
+    --text-main: #e2e8f0;     
+    --text-muted: #94a3b8;    
+    --primary: #FBB13C;       
+    --primary-hover: #7c3aed; 
+    --accent: #10b981;        
+    --border: #ffa000;        
 }
 
 /* --- Estilos Generales --- */
@@ -45,9 +45,9 @@ header h1 {
 
 header p {
     color: var(--primary);
-    font-weight: bold;
+    font-weight: 400;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
 }
 
 h2, h3 {
@@ -69,7 +69,7 @@ h3 {
     border-radius: 16px;
     border: 1px solid var(--border);
     margin-bottom: 25px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 15px -3px rgba(255, 160, 0, 0.22);
 }
 
 /* --- Lista de Pautas --- */
@@ -191,6 +191,21 @@ h3 {
     border: 1px solid var(--border);
     margin: 20px 0;
 }
+
+.btn-copy {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 8px;
+}
+
+.btn-copy:hover { 
+    background-color: var(--primary-hover); }
 
 .detail-item {
     margin-bottom: 10px;
